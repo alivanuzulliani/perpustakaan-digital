@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Detail Buku</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2 id="detailTitle"></h2>
+    <p id="detailAuthor"></p>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const title = params.get("title");
+const author = params.get("author");
+
+document.getElementById("detailTitle").innerText = title;
+document.getElementById("detailAuthor").innerText = "✍ " + author;
+</script>
+
+</body>
+</html>
